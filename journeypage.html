@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Meals on Me</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/icons/mealsonme_icon.png" rel="icon">
+  <link href="assets/img/icons/mealsonme_icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <header id="header" data-aos-delay="100">
+    <div class="container d-flex align-items-center justify-content-between" data-aos="fade-down">
+      <div class="logo hidemb">
+        <a href="index.html"><img src="assets/img/icons/logo.png" alt="" class="img-fluid"></a>
+      </div>
+      <nav id="navbar" class="navbar">
+        <ul>
+            <li class="hidedsktp">
+              <a href="index.html"><img src="assets/img/icons/logo.png" alt="" class="img-fluid"></a>
+            </li>
+            <li>
+              <a class="nav-link scrollto active" href="journeypage.html" >Menu </a>
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="corporate-discounts.html"> Corporate Discount </a>
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="teachers-discounts.html"> Teachers Discount </a>
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="#"> Item four </a>
+            </li>
+            <li class="hidedsktp">
+              <button type="button" class="btn btn-primary ms-3" href="login.html">Login</button>
+            </li>
+            <li class="hidedsktp mt-2">
+              <button type="button" class="btn btn-primary ms-3" data-bs-toggle="modal" data-bs-target="#requestCallBakForm"> Request Callback  </button>
+            </li>
+          </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+      <p class="hidedsktp downlod mb-0">  DOWNLOAD OUR APP </p>
+      <div class="d-flex align-items-center">
+        <a href="index.html"><img src="assets/img/icons/apple.png" alt="" class="img-fluid dwnldicon"></a>
+        <a href="index.html"><img src="assets/img/icons/andriod.png" alt="" class="img-fluid dwnldicon ms-3"></a>
+        <button type="button" class="btn btn-primary ms-3 hidemb">Login</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="pt40">
+    <div class="container orderpage" data-aos-delay="100">
+        <div class="bgwhite brd12 p-3">
+            <ul class="nav nav-pills mb-3 d-flex justify-content-between" id="pills-tab" role="tablist" data-aos="fade-down">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-plandeatils-tab" data-bs-toggle="pill" data-bs-target="#pills-plandeatils" type="button" role="tab" aria-controls="pills-plandeatils" aria-selected="true"> Plan Details </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-payment-tab" data-bs-toggle="pill" data-bs-target="#pills-payment" type="button" role="tab" aria-controls="pills-payment" aria-selected="false"> Payment </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-confirmation-tab" data-bs-toggle="pill" data-bs-target="#pills-confirmation" type="button" role="tab" aria-controls="pills-confirmation" aria-selected="false"> Confirmation </button>
+                </li>
+            </ul>
+        </div>
+        <div class="tab-content pt40 pb-5" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-plandeatils" role="tabpanel" aria-labelledby="pills-plandeatils-tab">
+                <form id="planDetailsForm" onsubmit="return validateFormplaDetails(event)">
+                    <div class="row" data-aos-delay="100">
+                        <div class="col-xl-6 col-lg-12 mb-3" data-aos="fade-right">
+                            <div class="brd12 bgwhite p-3">
+                                <h3 class="mb-3"> Meal Plan Details </h3>
+                                <div class="d-flex align-items-start justify-content-between mb-3 disblk">
+                                      <div class="selectcountry w-50">
+                                        <label class="lablel14" for="selectCountry">Emirate:</label>
+                                        <select class="form-select" id="selectCountry" aria-label="Dubai" required>
+                                            <option value="Dubai" selected>Dubai</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                      </div>
+                                      <div class="mx-2"> &nbsp; </div>
+                                      <div class="selectarea w-50">
+                                        <label class="lablel14" for="selectDeliveryArea">Select Accurate Delivery Area:</label>
+                                        <select class="form-select" id="selectDeliveryArea" required>
+                                          <option value="1">One</option>
+                                          <option value="2">Two</option>
+                                          <option value="3">Three</option>
+                                        </select>
+                                      </div>
+                                </div>  
+        
+                                <h4> Meals Per Day </h4>
+                                <div class="d-flex align-items-start justify-content-between mb-3">
+                                    <div class="number-buttons-container d-flex align-items-start justify-content-between w-100" id="mealsPerDay">
+                                        <button type="button" class="number-button selectmels" onclick="selectNumberDay(event, this)">1</button>
+                                        <button type="button" class="number-button selectmels" onclick="selectNumberDay(event, this)">2</button>
+                                        <button type="button" class="number-button selectmels" onclick="selectNumberDay(event, this)">3</button>
+                                        <button type="button" class="number-button selectmels" onclick="selectNumberDay(event, this)">4</button>
+                                        <button type="button" class="number-button selectmels" onclick="selectNumberDay(event, this)">5</button>
+                                        <button type="button" class="number-button selectmels" onclick="selectNumberDay(event, this)">6</button>
+                                        <button type="button" class="number-button selectmels" onclick="selectNumberDay(event, this)">7</button>
+                                    </div>
+                                </div>
+        
+                                <div class="d-flex align-items-start justify-content-between mb-3 disblk">
+                                    <div class="selectcountry w-50">
+                                        <label class="lablel14" for="startDate">Select Start Date:</label>
+                                        <input type="text" id="startDate" class="form-control" placeholder="Select Start Date" required>      
+                                    </div>
+                                    <div class="mx-2"> &nbsp; </div>
+                                    <div class="selectarea w-50">
+                                        <label class="lablel14" for="NumberofWeeks">Number of Weeks:</label>
+                                        <select class="form-select" id="NumberofWeeks" required>
+                                            <option value="1"> 3/4 Days </option>
+                                            <option value="2"> 1 Week </option>
+                                            <option value="2"> 4 Week </option>
+                                            <option value="2"> 8 Week </option>
+                                        </select>
+                                    </div>
+                                </div> 
+        
+                                <h4> Select Delivery Days </h4>
+                                <div class="d-flex align-items-start justify-content-between mb-3">
+                                    <div class="number-buttons-container d-flex align-items-start justify-content-between w-100" id="deliveryDays">
+                                        <button type="button" class="number-button" onclick="selectNumberDelDay(event, this)">Sun</button>
+                                        <button type="button" class="number-button" onclick="selectNumberDelDay(event, this)">Mon</button>
+                                        <button type="button" class="number-button" onclick="selectNumberDelDay(event, this)">Tue</button>
+                                        <button type="button" class="number-button" onclick="selectNumberDelDay(event, this)">Wed</button>
+                                        <button type="button" class="number-button" onclick="selectNumberDelDay(event, this)">Thu</button>
+                                        <button type="button" class="number-button" onclick="selectNumberDelDay(event, this)">Fri</button>
+                                    </div>
+                                </div>
+        
+                                <h4> Select Time Slots </h4>
+                                <div class="d-flex align-items-start justify-content-between mb-3 timeslot">
+                                    <div class="number-buttons-container d-flex align-items-start justify-content-between w-100" id="timeSlots">
+                                        <button type="button" class="number-button" onclick="selectedBoxLunchTime(event, this)" data-key="deliveryslotlunchbutton">11:00 - 13:00</button>
+                                        <button type="button" class="number-button" onclick="selectedBoxLunchTime(event, this)" data-key="deliveryslotdinnerbutton">13:00 - 15:00</button>
+                                        <button type="button" class="number-button" onclick="selectedBoxLunchTime(event, this)" data-key="deliveryslotdinnerbutton">15:00 - 17:00</button>
+                                        <button type="button" class="number-button" onclick="selectedBoxLunchTime(event, this)" data-key="deliveryslotdinnerbutton">17:00 - 19:00</button>
+                                    </div>
+                                </div>
+        
+                                <div class="mb-3">
+                                  <div class="d-flex align-items-center">
+                                    <h4 class="me-3 mb-0">Additional Notes and Allergies</h4>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="allergyRadio" id="yesRadio" value="yes" onchange="toggleTextarea()">
+                                      <label class="form-check-label" for="yesRadio">
+                                        Yes
+                                      </label>
+                                    </div>
+                                    <div class="form-check ms-3">
+                                      <input class="form-check-input" type="radio" name="allergyRadio" id="noRadio" value="no" onchange="toggleTextarea()" checked>
+                                      <label class="form-check-label" for="noRadio">
+                                        No
+                                      </label>
+                                    </div>
+                                  </div>
+                                  </div>
+                                
+                                <div class="mb-2" id="dietInfoContainer" style="display: none;">
+                                  <textarea class="form-control textarea" id="dietInfo" rows="4" placeholder="Please write here anything we need to know about your diet and allergies"></textarea>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-xl-6 col-lg-12" data-aos="fade-left">
+                            <div class="brd12 bgwhite p-3">
+                                <h3 class="mb-3"> Delivery Address </h3>
+                                <div class="mb-3">
+                                  <div class="d-flex align-items-center">
+                                    <div class="w-50">
+                                      <label class="lablel14" for="fullname">First Name:</label>
+                                      <div class="input-group">
+                                          <span class="input-group-text p-0 border-0">
+                                            <select class="form-select rounded-0" id="titleSelectOrder" required>
+                                              <option value="Mr">Mr</option>
+                                              <option value="Ms">Ms</option>
+                                            </select>
+                                          </span>
+                                          <input type="text" class="form-control" id="fullname" placeholder="First Name" maxlength="100" required>
+                                      </div>
+                                    </div>  
+                                    <div class="w-50">
+                                      <label class="lablel14" for="lastname">Last Name:</label>
+                                      <input type="text" class="form-control ms-2" id="lastname" placeholder="Last Name" maxlength="100" required>
+                                    </div>
+                                  </div> 
+                                </div>
+        
+                                <div class="mb-3">
+                                    <label class="lablel14" for="email">Email Address:</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Email Address" maxlength="120" required>
+                                </div>
+        
+                                <div class="mb-3">
+                                    <label class="lablel14" for="phone">Phone Number:</label>
+                                    <div class="input-group">
+                                      <span class="input-group-text">
+                                          +971
+                                      </span>
+                                      <input type="text" class="form-control" id="phone" placeholder="Phone Number" minlength="7" maxlength="7" required>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="form-check d-flex align-items-center">
+                                        <input class="form-check-input" type="radio" name="addressType" id="home" value="home" checked>
+                                        <label class="form-check-label ms-2" for="home"> Home  </label>
+                                    </div>
+                                    <div class="form-check d-flex align-items-center ms-3">
+                                        <input class="form-check-input" type="radio" name="addressType" id="office" value="office">
+                                        <label class="form-check-label ms-2" for="office"> Office </label>
+                                    </div>
+                                </div>
+        
+                                <div class="mb-3 hiddenfield" id="companyNameDiv">
+                                    <label class="lablel14" for="companyName">Company Name:</label>
+                                    <input type="text" class="form-control" id="companyName" placeholder="Company Name" maxlength="100">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="lablel14" for="streetName">Street Name:</label>
+                                    <input type="text" class="form-control" id="streetName" placeholder="Street Name" maxlength="100" required>
+                                </div>
+        
+                                <div class="mb-3">
+                                    <label class="lablel14" for="buildingNumber">Building Number:</label>
+                                    <input type="text" class="form-control" id="buildingNumber" placeholder="Building Number" maxlength="100" required>
+                                </div>
+        
+                                <div class="mb-3">
+                                    <label class="lablel14" for="apartmentNumber">Apartment Number:</label>
+                                    <input type="text" class="form-control" id="apartmentNumber" placeholder="Apartment Number" maxlength="100" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="lablel14" for="landmark">Landmark:</label>
+                                    <input type="text" class="form-control" id="landmark" placeholder="Landmark" maxlength="100">
+                                </div>
+                            </div>
+                            
+                            <div class="brd12 p-3 mt-5 brd1sol">
+                                <h3 class="mb-3 ordersummary"> Order Summary </h3>
+                                <p> <b>0 Meals</b> delivered over <b>0 weeks</b> </p>
+                                <hr>        
+                                <h3 class="mb-3 ordersummary light"> Total to Pay: <b class="ms-2"> 0 <span>AED</span> </b></h3>        
+                            </div>
+        
+                        </div>
+                    </div>
+        
+                    <div class="mt-3 d-flex justify-content-between">
+                        <button type="button" class="btn btn-outline-primary w-auto" onclick="goBack()"> <i class="bi bi-arrow-left"></i> BACK </button>
+                        <button type="submit" class="btn btn-primary w-auto" id="nextButton">  NEXT <i class="bi bi-arrow-right"></i> </button>
+                    </div>
+                </form>
+            </div>
+            <div class="tab-pane fade" id="pills-payment" role="tabpanel" aria-labelledby="pills-payment-tab">
+                <div class="row" data-aos-delay="100">
+                    <div class="col-xl-4 col-lg-6 col-sm-12 col-12" data-aos="fade-right">
+                        <div class="card p-3">
+                            <h3 class="mb-3"> ORDER SUMMARY </h3>
+                            <p class="mb-0"> <b>Indian</b> Meal Plan </p>
+                            <hr>
+                            <div class="d-flex align-items-start">
+                                <p class="ms-2"> <b class="w150"> Cuisine </b> Wholesome </p>
+                            </div>
+                            <div class="d-flex align-items-start">
+                              <p class="ms-2"> <b class="w150"> Meal Type </b> Dinner only </p>
+                            </div>
+                            <div class="d-flex align-items-start">
+                              <p class="ms-2"> <b class="w150"> Meals Per Day </b> 1 meal/per day </p>
+                            </div>
+                            <div class="d-flex align-items-start">
+                              <p class="ms-2"> <b class="w150"> Delivery Days </b>mon|tue|wed </p>
+                            </div>
+                            <div class="d-flex align-items-start">
+                              <p class="ms-2"> <b class="w150"> Duration </b> 1 week </p>
+                            </div>
+                            <div class="d-flex align-items-start">
+                              <p class="ms-2"> <b class="w150"> Delivery Slot </b> Dinner - 5 PM to 7 PM </p>
+                            </div>
+                            <div class="d-flex align-items-start">
+                              <p class="ms-2"> <b class="w150"> Start Date </b> 2024-07-02 </p>
+                            </div>
+                            <div class="d-flex align-items-start">
+                              <p class="ms-2"> <b class="w150"> End Date </b> 	2024-07-08 </p>
+                            </div>
+                            <div class="d-flex align-items-start">
+                              <p class="ms-2"> <b class="w150"> Allergies </b> Allergies </p>
+                            </div>  
+                            <hr>                            
+                            <p class="mb-0"> <b>Delivery Details </b> </p>
+                            <hr>
+                            <div class="d-flex align-items-start">
+                              <p class="ms-2"> <b class="w150"> Full Name </b> Sfd Dsf </p>
+                            </div>
+                            <div class="d-flex align-items-start">
+                              <p class="ms-2"> <b class="w150"> Email </b> asdmasklda@gmail.com </p>
+                            </div>
+                            <div class="d-flex align-items-start">
+                              <p class="ms-2"> <b class="w150"> Mobile Number </b> <b>[+971]</b> 33333312 </p>
+                            </div>
+                            <div class="d-flex align-items-start">
+                              <p class="ms-2"> <b class="w150"> Delivery Address </b> Damac Hills - | sfd | sdf | df | df </p>
+                            </div>
+
+
+                            <div class="d-flex align-items-start">
+                                <img src="assets/img/orderpage/plus.png" style="height: 24px">
+                                <p class="ms-2"> Add-ons: </p>
+                            </div>
+                            <div id="dropdownHealthyMenu" style="display: none;">
+                              <select class="form-select" aria-label="Default select example">
+                                <option selected> Get 3 Days Breakfast Free Worth AED 90 With Your Meals! </option>
+                                <option value="1"> Get 5 Days Breakfast Free With Monthly Meal Plan! </option>
+                                <option value="2"> Get 15% OFF on 3 & 4 Days Meal Plan! </option>
+                                <option value="3"> Get 10-20% Discount On Your Weekly Or Monthly Meal Plan! </option>
+                              </select>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary w-100 my-3" onclick="toggleHealthyDropdown()""> Healthy Add-ons </button>
+                    </div>
+
+                    <div class="col-xl-5 col-lg-6 col-sm-12 col-12" data-aos="fade-up">
+                        <div class="card p-3 discount">
+                            <h3 class="mb-3"> DISCOUNTS </h3>
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <p class="mb-0"> 20% Discount for Teachers </p>
+                                <button type="button" class="btn btn-outline-primary w-auto"> Redeem <span class="hidemob"> Code </span> </button>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <p class="mb-0"> 15% First Time Order </p>
+                                <button type="button" class="btn btn-outline-primary w-auto"> Redeem <span class="hidemob"> Code </span> </button>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <p class="mb-0"> 10% For Government Employees </p>
+                                <button type="button" class="btn btn-outline-primary w-auto"> Redeem <span class="hidemob"> Code </span> </button>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <p class="mb-0"> 5% For Government Employees </p>
+                                <button type="button" class="btn btn-outline-primary w-auto"> Redeem <span class="hidemob"> Code </span> </button>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <input type="text" class="form-control" id="discountcode" placeholder="Enter Discount Code" maxlength="10">
+                                <button type="button" class="btn btn-outline-primary w-auto"> Redeem <span class="hidemob"> Code </span> </button>
+                            </div>
+                        </div>
+                        <div class="brd12 p-3 mt-3 brd1sol hidemob">
+                          <p class=" d-flex justify-content-between"> <b>Total Amount:</b> <b class="ms-2"> 319.2 <span style="font-weight: 400;">AED</span> </b> </p>
+
+                          <p class=" d-flex justify-content-between"> <b>Delivery Charges:</b> <b class="ms-2" style="color: #3FA100;"> FREE </b> </p>
+
+                          <p class=" d-flex justify-content-between"> <b>VAT 5%:</b> <b class="ms-2"> 15.2 <span style="font-weight: 400;">AED</span> </b> </p>
+                          <hr>    
+                          <h3 class="mb-3 ordersummary light  d-flex justify-content-between"> Total to Pay: <b class="ms-2"> 319.2 <span style="font-weight: 400;">AED</span> </b> </h3>    
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-sm-12 col-12" data-aos="fade-left">
+                        <div class="card p-3 card_details">
+                            <h3 class="mb-3"> CARD DETAILS </h3>
+                            <p class="mb-0"> Payment Type </p>
+                            <div class="d-flex align-items-center justify-content-between my-3">
+                                 <button type="button" class="btn btn-outline-dark" onclick="showAlert('CASH')">CASH</button>
+                                <div class="my-2"> <i class="bi bi-plus" style="font-size: 36px; font-weight: bold;"></i> </div>
+                                <button type="button" class="btn btn-outline-dark" onclick="showAlert('CARD')"> CARD </button>
+                            </div>
+
+                            <form id="orderForm" onsubmit="validateFormOrder(event)">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text">
+                                        <img src="assets/img/icons/fullname.png" alt="Full Name Icon">
+                                    </span>
+                                    <input type="text" class="form-control" id="fullnamecard" placeholder="Full Name" maxlength="100" required>
+                                    <div class="invalid-feedback">Please enter your full name using only letters and spaces.</div>
+                                </div>
+                    
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text">
+                                        <img src="assets/img/orderpage/card.png" alt="Card Number Icon">
+                                    </span>
+                                    <input type="text" class="form-control" id="cardnumber" placeholder="Card Number (16 digits)" maxlength="16" required>
+                                    <div class="invalid-feedback">Please enter a valid 16-digit card number.</div>
+                                </div>
+                    
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text">
+                                        <img src="assets/img/orderpage/securitycode.png" alt="Security Code Icon">
+                                    </span>
+                                    <input type="text" class="form-control" id="security" placeholder="Security Code (3 digits)" maxlength="3" required>
+                                    <div class="invalid-feedback">Please enter a valid 3-digit security code.</div>
+                                </div>                    
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-sm-12 col-12 hidethis" data-aos="fade-right">
+                    </div>
+                    <div class="col-xl-5 col-lg-6 col-sm-12 col-12 hidedsk" data-aos="fade-down">
+                        <div class="brd12 p-3 mt-3 brd1sol">
+                            <p class=" d-flex justify-content-between"> <b>Total Amount:</b> <b class="ms-2"> 319.2 <span style="font-weight: 400;">AED</span> </b> </p>
+
+                            <p class=" d-flex justify-content-between"> <b>Delivery Charges:</b> <b class="ms-2" style="color: #3FA100;"> FREE </b> </p>
+
+                            <p class=" d-flex justify-content-between"> <b>VAT 5%:</b> <b class="ms-2"> 15.2 <span style="font-weight: 400;">AED</span> </b> </p>
+                            <hr>    
+                            <h3 class="mb-3 ordersummary light  d-flex justify-content-between"> Total to Pay: <b class="ms-2"> 319.2 <span style="font-weight: 400;">AED</span> </b> </h3>    
+                        </div>
+                    </div>
+                </div>    
+                <div class="mt-3 d-flex justify-content-between">
+                    <button type="button" class="btn btn-outline-primary w-auto" onclick="goBack()"> <i class="bi bi-arrow-left"></i> BACK </button>
+                    <button type="submit" class="btn btn-primary w-auto" id="completeButton">  COMPLETE ORDER <i class="bi bi-arrow-right"></i></button>
+                </div>     
+            </div>
+            <div class="tab-pane fade" id="pills-confirmation" role="tabpanel" aria-labelledby="pills-confirmation-tab">
+                <div class="mt-5 text-center">
+                    <h2 class="congratulations"> Congratulations, your Meal Plan has been added to Your account </h2>
+                    <p> Please select your menu for each day </p>
+
+                    <button type="submit" class="btn btn-primary w-auto" id="nextButton">  Select Your Menu </button>
+                </div>
+            </div>
+        </div>
+
+  </section>
+
+
+  <section id="footer" class="section-bg">
+    <div class="footer-top text-center">
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-center">
+          <a href="index.html"><img src="assets/img/icons/logo.png" alt="" class="img-fluid"></a>
+        </div>
+
+        <div class="row mt-2">
+          <ul class="col-12 d-flex align-items-center justify-content-center">
+            <li> <a href="#"> Terms and Conditions </a> </li>
+            <li> <a href="#"> How It Works </a> </li>
+            <li> <a href="#"> FAQs </a> </li>
+          </ul>
+        </div>
+
+        <p class="mb-1"> <b> Follow us on: </b></p>
+
+        <div class="social-links">
+            <a href="https://www.facebook.com/hellomealsonme/" class="facebook">  
+              <img src="assets/img/icons/facebook.png">
+            </a>
+            <a href="https://www.instagram.com/hellomealsonme/?hl=en" class="instagram mx-3"> 
+                <img src="assets/img/icons/instagrma.png"> 
+            </a>
+            <a href="https://www.linkedin.com/company/hello-meals-on-me" class="linkedin">  
+                <img src="assets/img/icons/linkedin.png">
+            </a>
+          </div>
+        <hr>
+        <p> Copyright MealsOnMe © 2021. All rights reserved. <br/>
+          This website is owned by <b>"MEALS ON ME CATERING SERVICES L.L.C"</b> based in Dubai. </p>
+      </div>
+    </div>
+  </section>
+  <div class="footericons" data-aos-delay="100">
+    <ul class="p-0 m-0" data-aos="fade-right">
+      <li>
+        <a href="">
+          <img id="whatsapp-icon" src="assets/img/icons/whstapp.png" style="position: relative; animation-play-state: paused;">
+        </a>
+      </li>
+      <li class="hidedsktp">
+        <a href="">
+          <img src="assets/img/icons/call.png">
+        </a>
+      </li>
+      <li>
+        <a href="" data-bs-toggle="modal" data-bs-target="#spinAWheel">
+            <img id="spinwheel-icon" src="assets/img/icons/spinwheel.png" style="position: relative; animation-play-state: paused;">
+          </a>
+      </li>
+    </ul>
+  </div> 
+  <div class="footericons" data-aos-delay="100">
+    <ul class="p-0 m-0" data-aos="fade-right">
+      <li>
+        <a href="">
+          <img id="whatsapp-icon" src="assets/img/icons/whstapp.png" style="position: relative; animation-play-state: paused;">
+        </a>
+      </li>
+      <li class="hidedsktp">
+        <a href="">
+          <img src="assets/img/icons/call.png">
+        </a>
+      </li>
+      <li>
+        <a href="" data-bs-toggle="modal" data-bs-target="#spinAWheel">
+            <img id="spinwheel-icon" src="assets/img/icons/spinwheel.png" style="position: relative; animation-play-state: paused;">
+          </a>
+      </li>
+    </ul>
+  </div> 
+
+   <!-- Spin a Wheel -->
+   <div class="modal fade" id="spinAWheel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="spinAWheelLabel" aria-hidden="true">
+    <div class="modal-dialog sharebox">
+      <div class="modal-content spinwheel">
+        <div class="modal-body">
+            <div class="formsection">
+                <div class="closeIcon">
+                    <a href="#" class="closeIcon" data-bs-dismiss="modal">X</a>
+                </div>
+                <div class="block text-left mt-3">
+                    <h3> Spin the Wheel <span class="primaryclr"> to get Amazing Discounts </span> </h3>
+                    <p> Signup with your details in order to spin the wheel. </p>
+
+                    <form id="validateSpinWheeltForm" class="mt-5">
+                        <li data-aos="fade-up" class="list-unstyled mb-4 d-flex align-items-center">
+                            <div class="input-group" style="max-width: 80px;">
+                                <select class="form-select" id="titleSelect" required>
+                                    <option value="Mr">Mr</option>
+                                    <option value="Ms">Ms</option>
+                                </select>
+                            </div>
+                            <div class="input-group ms-3">
+                                <span class="input-group-text">
+                                    <img src="assets/img/icons/fullname.png" alt="Full Name Icon">
+                                </span>
+                                <input type="text" class="form-control" id="fullnamespinwheel" placeholder="Full Name" maxlength="100" required>
+                            </div>
+                        </li>
+                    
+                        <li data-aos="fade-up" class="list-unstyled mb-4">
+                            <div class="input-group">
+                              <span class="input-group-text">
+                                  +971
+                              </span>
+                              <input type="text" class="form-control" id="phonespinwheel" placeholder="Phone Number" minlength="7" maxlength="7" required>
+                            </div>
+                        </li>
+                        
+                        <li data-aos="fade-up" class="list-unstyled mb-4">
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <img src="assets/img/icons/email.png" alt="Email Icon">
+                                </span>
+                                <input type="email" class="form-control" id="email" placeholder="Email" maxlength="120" required>
+                            </div>
+                        </li>
+                    
+                        <li data-aos="fade-up" class="list-unstyled mb-4">
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <img src="assets/img/icons/address.png" alt="Address Icon">
+                                </span>
+                                <input type="text" class="form-control" id="address" placeholder="Address" required>
+                            </div>
+                        </li>
+                    
+                        <div class="d-flex align-items-center">
+                            <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary w-100 ms-3"> <span class="hidemob">Submit Details and</span> Spin the Wheel</button>
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+            <div class="spin-container text-center">
+              <div class="spinWheelbox">
+                <canvas id="spinWheel" class="spin-wheel"></canvas>
+                <button id="spin_btn">&nbsp;</button>
+                <div id="text"></div>
+                <div class="arrowIcon"></div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Error Modal -->
+<div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body p-3" id="modalBody">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.9/dist/flatpickr.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+  <script>
+    function toggleHealthyDropdown() {
+      var dropdown = document.getElementById("dropdownHealthyMenu");
+      if (dropdown.style.display === "none") {
+        dropdown.style.display = "block";
+      } else {
+        dropdown.style.display = "none";
+      }
+    }
+  </script>
+  <script>
+    function toggleTextarea() {
+      var radioValue = document.querySelector('input[name="allergyRadio"]:checked');
+      var dietInfoContainer = document.getElementById('dietInfoContainer');
+
+      if (radioValue && dietInfoContainer) {
+        if (radioValue.value === 'yes') {
+          dietInfoContainer.style.display = 'block';
+        } else {
+          dietInfoContainer.style.display = 'none';
+        }
+      }
+    }
+  </script>
+  <script>
+     $(document).ready(function() {
+      $('#selectDeliveryArea').select2({
+        placeholder: 'Select Accurate Delivery Area',
+        allowClear: true,
+        width: '100%',
+      });
+    });
+  </script>
+
+<script>
+  $(document).ready(function() {
+    $('#startDate').datepicker({
+      format: 'mm/dd/yyyy',
+      autoclose: true,
+      todayHighlight: true,
+      startDate: '-0d', 
+      daysOfWeekDisabled: '6',
+    });
+  });
+</script>
+
+<script>
+  function showAlert(message) {
+    alert(message);
+  }
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var form = document.getElementById('planDetailsForm');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            validateFormplaDetails(event);
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var fullnameInput = document.getElementById('fullname');
+        var phoneInput = document.getElementById('phone');
+        var lastnameInput = document.getElementById('lastname');
+        var form = document.getElementById('callbackForm');
+
+        fullnameInput.addEventListener('input', function() {
+            this.value = this.value.replace(/[^a-zA-Z\s]/g, '');
+        });
+
+        lastnameInput.addEventListener('input', function() {
+            this.value = this.value.replace(/[^a-zA-Z\s]/g, '');
+        });
+
+        phoneInput.addEventListener('input', function() {
+            this.value = this.value.replace(/[^\d]/g, '');
+        });
+    });
+
+    function validateFormplaDetails(event) {
+        event.preventDefault();
+        var form = document.getElementById('planDetailsForm');
+        var isValid = true;
+        var errorMessages = '';
+
+        var mealsPerDay = document.querySelector('.selectmels.selectedBoxLunch');
+        if (!mealsPerDay) {
+            errorMessages += '<p>Please select the number of meals per day.</p>';
+            isValid = false;
+        }
+
+        var timeSlots = document.querySelector('.selectedBoxLunchTime');
+        if (!timeSlots) {
+            errorMessages += '<p>Please select a time slot.</p>';
+            isValid = false;
+        }
+
+        var deliveryDays = document.querySelectorAll('.selectedBoxLunchNuberDel');
+        if (deliveryDays.length < 3) {
+            errorMessages += '<p>Please select at least 3 delivery days.</p>';
+            isValid = false;
+        }
+
+        if (!isValid) {
+            document.getElementById('modalBody').innerHTML = errorMessages;
+            $('#errorModal').modal('show');
+        } else {
+          $('#errorModal').modal('hide');
+          alert('Form submitted successfully!');
+          var paymentTab = new bootstrap.Tab(document.getElementById('pills-payment-tab'));
+          paymentTab.show();
+        }
+    }
+
+    function selectNumberDay(event, button) {
+        event.preventDefault();
+
+        const selectedButton = document.querySelector('.selectedBoxLunch');
+        if (selectedButton) {
+            selectedButton.classList.remove('selectedBoxLunch');
+        }
+        button.classList.add('selectedBoxLunch');
+    }
+
+    function selectedBoxLunchTime(event, button) {
+        event.preventDefault();
+
+        const selectedButton = document.querySelector('.selectedBoxLunchTime');
+        if (selectedButton) {
+            selectedButton.classList.remove('selectedBoxLunchTime');
+        }
+        button.classList.add('selectedBoxLunchTime');
+    }
+
+    function selectNumberDelDay(event, button) {
+        event.preventDefault();
+        const selectedButtons = document.querySelectorAll('.selectedBoxLunchNuberDel');
+        if (selectedButtons.length >= 993 && !button.classList.contains('selectedBoxLunchNuberDel')) {
+        } else {
+            button.classList.toggle('selectedBoxLunchNuberDel');
+        }
+    }
+
+    function goBack() {
+        let planDetailsTab = new bootstrap.Tab(document.getElementById('pills-plandeatils-tab'));
+        planDetailsTab.show();
+    }
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const orderForm = document.getElementById('orderForm');
+    const completeButton = document.getElementById('completeButton');
+
+    
+    var fullnamecardInput = document.getElementById('fullnamecard');
+    var cardnumberInput = document.getElementById('cardnumber');
+    var securityInput = document.getElementById('security');
+
+    fullnamecardInput.addEventListener('input', function() {
+            this.value = this.value.replace(/[^a-zA-Z\s]/g, '');
+    });
+
+    cardnumberInput.addEventListener('input', function() {
+        this.value = this.value.replace(/[^\d]/g, '');
+    });
+
+    securityInput.addEventListener('input', function() {
+        this.value = this.value.replace(/[^\d]/g, '');
+    });
+    
+    completeButton.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        validateFormOrder(event); // Call the validation function
+    });
+
+    function validateFormOrder(event) {
+        event.preventDefault();
+        var form = document.getElementById('orderForm');
+        var isValid = true;
+        var errorMessages = '';
+
+        // Validate full name
+        var fullName = document.getElementById('fullnamecard').value.trim();
+        if (fullName === '') {
+            errorMessages += '<p>Please enter your full name.</p>';
+            isValid = false;
+        }
+
+        // Validate card number
+        var cardNumber = document.getElementById('cardnumber').value.trim();
+        if (cardNumber === '' || cardNumber.length !== 16 || isNaN(cardNumber)) {
+            errorMessages += '<p>Please enter a valid 16-digit card number.</p>';
+            isValid = false;
+        }
+
+        // Validate security code
+        var securityCode = document.getElementById('security').value.trim();
+        if (securityCode === '' || securityCode.length !== 3 || isNaN(securityCode)) {
+            errorMessages += '<p>Please enter a valid 3-digit security code.</p>';
+            isValid = false;
+        }
+
+        // Display error messages or proceed to submission
+        if (!isValid) {
+            document.getElementById('modalBody').innerHTML = errorMessages;
+            $('#errorModal').modal('show');
+        } else {
+            $('#errorModal').modal('hide');
+            alert('Form submitted successfully!'); // You can remove this alert in production
+
+            // Switch to the confirmation tab programmatically
+            var confirmationTab = new bootstrap.Tab(document.getElementById('pills-confirmation-tab'));
+            confirmationTab.show();
+        }
+    }
+});
+
+</script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const homeRadio = document.getElementById('home');
+      const officeRadio = document.getElementById('office');
+      const companyNameDiv = document.getElementById('companyNameDiv');
+
+      function toggleCompanyName() {
+        if (officeRadio.checked) {
+          companyNameDiv.classList.remove('hiddenfield');
+        } else {
+          companyNameDiv.classList.add('hiddenfield');
+        }
+      }
+
+      homeRadio.addEventListener('change', toggleCompanyName);
+      officeRadio.addEventListener('change', toggleCompanyName);
+
+      // Initialize the visibility based on the default selection
+      toggleCompanyName();
+    });
+  </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var phonespinwheelInput = document.getElementById('phonespinwheel');
+      var form = document.getElementById('validateSpinWheeltForm');
+
+      if (phonespinwheelInput) {
+        phonespinwheelInput.addEventListener('input', function() {
+              this.value = this.value.replace(/[^\d+]/g, '');
+          });
+      } else {
+        console.error('Element with ID "phonespinwheel" not found.');
+      }
+
+      if (form) {
+        form.addEventListener('submit', function(event) {
+          event.preventDefault();
+          validateSpinWheeltForm();
+        });
+      } else {
+        console.error('Element with ID "validateSpinWheeltForm" not found.');
+      }
+
+      function validateSpinWheeltForm() {
+        var phonespinwheel = document.getElementById('phonespinwheel').value.trim();
+        var isValid = true;
+        var errorMessages = '';
+
+        if (!isValid) {
+          document.getElementById('modalBody').innerHTML = errorMessages;
+          $('#errorModal').modal('show');
+          return false;
+        } else {
+          $('#errorModal').modal('hide');
+          alert('Form submitted successfully!');
+          spinWheelFunction();
+          document.getElementById('validateSpinWheeltForm').reset();
+          return false;
+        }
+      }
+
+      const spinWheelFunction = () => {
+      text.innerHTML = `<p>Best Of Luck!</p>`;
+      let randomDegree = Math.floor(Math.random() * (355 - 0 + 1) + 0);
+      let count = 0;
+      let resultValue = 101;
+      let rotationInterval = window.setInterval(() => {
+        spinChart.options.rotation += resultValue;
+        spinChart.update();
+        if (spinChart.options.rotation >= 360) {
+          count += 1;
+          resultValue -= 5;
+          spinChart.options.rotation = 0;
+        } else if (count > 15 && spinChart.options.rotation == randomDegree) {
+          generateValue(randomDegree);
+          clearInterval(rotationInterval);
+          count = 0;
+          resultValue = 101;
+        }
+      }, 10);
+    };   
+
+    });
+    
+
+  </script>
+
+<script>
+  const spinWheel = document.getElementById("spinWheel");
+    const text = document.getElementById("text");
+
+    const spinValues = [
+      { minDegree: 61, maxDegree: 90, value: '1%' },
+      { minDegree: 31, maxDegree: 60, value: '3%' },
+      { minDegree: 0, maxDegree: 30, value: '5%' },
+      { minDegree: 331, maxDegree: 360, value: '7%' },
+      { minDegree: 301, maxDegree: 330, value: '9%' },
+      { minDegree: 271, maxDegree: 300, value: '11%' },
+      { minDegree: 241, maxDegree: 270, value: '13%' },
+      { minDegree: 211, maxDegree: 240, value: '15%' },
+      { minDegree: 181, maxDegree: 210, value: '17%' },
+      { minDegree: 151, maxDegree: 180, value: '19%' },
+      { minDegree: 121, maxDegree: 150, value: '21%' },
+      { minDegree: 91, maxDegree: 120, value: '23%' },
+    ];
+
+    const size = [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10];
+
+    const spinColors = [
+      "#ffffff",
+      "#ffffff",
+      "#ffffff",
+      "#ffffff",
+      "#ffffff",
+      "#ffffff",
+      "#ffffff",
+      "#ffffff",
+      "#ffffff",
+      "#ffffff",
+      "#ffffff",
+      "#ffffff",
+    ];
+
+    let spinChart = new Chart(spinWheel, {
+      plugins: [ChartDataLabels],
+      type: "pie",
+      data: {
+        labels: ['1%', '3%', '5%', '7%', '9%', '11%', '13%', '15%', '17%', '19%', '21%', '23%'],
+        datasets: [
+          {
+            backgroundColor: spinColors,
+            borderColor: '#ba0000', 
+            borderWidth: 1,  
+            data: size,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        animation: { duration: 0 },
+        plugins: {
+          tooltip: false,
+          legend: {
+            display: false,
+          },
+          datalabels: {
+            rotation: 90,
+            anchor: 'end', 
+            align: 'start',
+            offset: 10,
+            color: "#ba0000",
+            formatter: (_, context) => context.chart.data.labels[context.dataIndex],
+            font: { size: 16 },
+          },
+        },
+      },
+    });
+    
+    const generateValue = (angleValue) => {
+      for (let i of spinValues) {
+        if (angleValue >= i.minDegree && angleValue <= i.maxDegree) {
+          text.innerHTML = `<p>Congratulations, You Have Won ${i.value} Discount! </p>`;
+          break;
+        }
+      }
+    };
+  
+</script>
+</body>
+</html>
